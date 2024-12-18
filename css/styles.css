@@ -109,65 +109,22 @@ header .subtitle {
     /* Borde decorativo */
 }
 
-/* Mejora del estilo para la advertencia de edad con efecto de palpitación */
-@keyframes pulsate {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    50% {
-        transform: scale(1.05);
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    100% {
-        transform: scale(1);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-}
-
-.age-warning {
-    background-color: #ff4136;
-    /* Rojo intenso */
-    color: white;
+/* Estilo básico para el texto */
+.highlighted {
+    color: #ff0000 !important; /* Rojo llamativo */
+    font-weight: bold;
+    font-size: 1.5em;
     text-align: center;
-    padding: 20px;
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1000;
-    animation: pulsate 2s ease-in-out infinite;
+    animation: heartbeat 1.5s infinite;
 }
 
-.age-warning p {
-    margin: 0 0 15px 0;
-}
-
-.close-btn {
-    background-color: white;
-    color: #ff4136;
-    border: none;
-    padding: 10px 25px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.close-btn:hover {
-    background-color: #f8f8f8;
-    transform: translateY(-2px);
-}
-
-/* Aseguramos que la animación se detenga para usuarios que prefieren menos movimiento */
-@media (prefers-reduced-motion: reduce) {
-    .age-warning {
-        animation: none;
+/* Animación de palpitación */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+        transform: scale(1.2); /* Tamaño aumentado */
     }
 }
 
