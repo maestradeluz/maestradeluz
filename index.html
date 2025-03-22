@@ -77,8 +77,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
   <section class="intro">
     <p class="highlighted">Cambia tu destino</p>
-    <a href="https://wa.me/+529994498188" class="free-consultation whatsapp-link" target="_blank"
-      onclick="return gtag_report_conversion('https://wa.me/+529994498188');">
+    <a href="#" class="free-consultation whatsapp-link" target="_blank"
+      onclick="return gtag_report_conversion(getWhatsAppLink());">
       <span>¡Consulta Hoy!</span>
     </a>
     <h2>Transforma tu Vida Hoy</h2>
@@ -124,7 +124,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           <p>¿Sientes que los obstáculos te impiden avanzar?<br>
             Elimina barreras y abre nuevas puertas a oportunidades, éxito y crecimiento personal.</p>
         </div>
-        <div class="service-card whatsapp-redirect">          <img data-src="assets/dinero.jpg" alt="Incrementar Ventas" class="lazyload service-img">
+        <div class="service-card whatsapp-redirect"> <img data-src="assets/dinero.jpg" alt="Incrementar Ventas"
+            class="lazyload service-img">
           <h4>Incrementar Ventas</h4>
           <p>¿Quieres aumentar tus ventas y hacer crecer tu negocio?<br>
             Potencia tus resultados con rituales esotéricos diseñados para atraer prosperidad y éxito en tus
@@ -268,8 +269,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     <h2>¡Contáctanos Hoy!</h2>
     <p>¿Listo para transformar tu vida y tu relación? Estamos aquí para ayudarte a tomar el primer paso.</p>
 
-    <a href="https://wa.me/+529994498188" class="free-consultation whatsapp-link" target="_blank"
-      onclick="return gtag_report_conversion('https://wa.me/+529994498188');">
+    <a href="#" class="free-consultation whatsapp-link" target="_blank"
+      onclick="return gtag_report_conversion(getWhatsAppLink());">
       <svg class="icon icon-tabler icon-tabler-bell-ringing" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
         stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -289,8 +290,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
   </footer>
 
   <!-- Ícono flotante de WhatsApp -->
-  <a href="https://wa.me/+529994498188" class="whatsapp-floating" target="_blank"
-    onclick="return gtag_report_conversion('https://wa.me/+529994498188');">
+  <a href="#" class="whatsapp-floating" target="_blank"
+    onclick="return gtag_report_conversion(getWhatsAppLink());">
     <img data-src="assets/icono-whatsapp.png" alt="WhatsApp" class="lazyload whatsapp-icon">
   </a>
 
@@ -467,17 +468,26 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     document.addEventListener('DOMContentLoaded', function () {
       // Selecciona todas las tarjetas con la clase "whatsapp-redirect"
       const whatsappCards = document.querySelectorAll('.whatsapp-redirect');
-      
+
       // Agrega el evento de clic a cada tarjeta
       whatsappCards.forEach(card => {
         card.addEventListener('click', function () {
-          window.location.href = "https://wa.me/+529994498188";
+          const url = getWhatsAppLink();
+          window.location.href = url;
           if (typeof gtag_report_conversion === 'function') {
-            gtag_report_conversion('https://wa.me/+529994498188');
+            gtag_report_conversion(url);
           }
         });
       });
     });
+  </script>
+  <script>
+    function getWhatsAppLink() {
+      const phoneNumber = "+50256683576";
+      const message = "¡Hola! Me interesa una consulta, ¿me puedes dar más información?";
+      const encodedMessage = encodeURIComponent(message);
+      return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    }
   </script>
 </body>
 
