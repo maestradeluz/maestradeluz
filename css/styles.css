@@ -1,4 +1,3 @@
-/* Configuración global */
 * {
     margin: 0;
     padding: 0;
@@ -12,9 +11,9 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom, #f0f8e2, #d2f7d9);
-    color: #333;
+    font-family: 'Marcellus', 'Poppins', serif;
+    background: linear-gradient(to bottom, #1b1b2f, #2d1e30, #3f2b47);
+    color: #f3e8ff;
     line-height: 1.6;
     max-width: 100%;
     overflow-x: hidden;
@@ -22,7 +21,7 @@ body {
 }
 
 header {
-    background: url('../assets/ocultismo.jpg') no-repeat center center;
+    background: url('../assets/ocultismo.png') no-repeat center center;
     background-size: cover;
     padding: 150px 80px;
     text-align: center;
@@ -50,18 +49,19 @@ header .header-content {
 header h1 {
     font-size: 3.5em;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     color: #ffd700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
 }
 
 header .subtitle {
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: 300;
     margin-top: 20px;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: #f3e8ff;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+    line-height: 1.8;
 }
 
 /* Contenedor principal del logo */
@@ -108,6 +108,7 @@ header .subtitle {
     font-weight: bold;
     font-size: 1.5em;
     text-align: center;
+    padding: 10px;
     animation: heartbeat 1.5s infinite;
 }
 
@@ -131,12 +132,12 @@ h3 {
 
 /* Secciones principales */
 section {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto 40px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 50px 20px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
 }
 
 section h2 {
@@ -152,20 +153,20 @@ section h2 {
     padding: 60px 20px;
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .problemas h2 {
+}
+
+.problemas h2 {
     color: #b8860b;
     font-size: 2.5em;
-    margin-bottom: 20px; 
-  }
-  
-  .subtitulo-problemas {
+    margin-bottom: 20px;
+}
+
+.subtitulo-problemas {
     color: #555;
     font-size: 1.2em;
     margin-bottom: 40px;
     font-style: italic;
-  }
+}
 
 .categorias-problemas {
     display: flex;
@@ -211,7 +212,13 @@ section h2 {
     font-size: 1.1em;
     text-align: center;
     margin-bottom: 20px;
-    color: #555;
+    color: #e8e6ff;
+}
+
+.subtitulo-problemas,
+.categoria-problema p,
+.service-card p {
+    color: #dcd6ff !important;
 }
 
 .legend {
@@ -263,36 +270,6 @@ section h2 {
     margin-bottom: 15px;
 }
 
-/* Testimonios */
-.testimonials {
-    padding: 60px 20px;
-    background-color: #e5ddd5;
-}
-
-.carousel-container {
-    position: relative;
-    max-width: 400px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 20px 0;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .06), 0 2px 5px 0 rgba(0, 0, 0, .2);
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.testimonial {
-    flex: 0 0 100%;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .message-bubble {
     background-color: #dcf8c6;
     border-radius: 7.5px;
@@ -309,54 +286,8 @@ section h2 {
     left: -8px;
     width: 0;
     height: 0;
-    border-top: 8px solid #dcf8c6;
+    border-top: 8px solid #2e2533;
     border-left: 8px solid transparent;
-}
-
-.testimonial-img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.8);
-    color: #128C7E;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .06), 0 2px 5px 0 rgba(0, 0, 0, .2);
-}
-
-.carousel-button:hover {
-    background: #128C7E;
-    color: #fff;
-}
-
-.carousel-button.prev {
-    left: 10px;
-}
-
-.carousel-button.next {
-    right: 10px;
-}
-
-.carousel-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
 }
 
 .dot {
@@ -388,16 +319,11 @@ section h2 {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.whatsapp-button:hover {
-    background-color: #128c7e;
-    transform: translateY(-3px);
-}
-
 /* Ícono flotante de WhatsApp */
 .whatsapp-floating {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 5px;
+    right: 5px;
     z-index: 1000;
     transition: transform 0.3s ease;
 }
@@ -413,8 +339,8 @@ section h2 {
 
 .back-to-top-floating {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
+    bottom: 5px;
+    left: 5px;
     z-index: 1000;
     transition: transform 0.3s ease;
 }
@@ -468,7 +394,50 @@ footer a:hover {
     transition: opacity 300ms;
 }
 
-/* Responsive design */
+.testimonials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.testimonials .testimonial {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.testimonials .message-bubble {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+}
+
+.testimonials .testimonial-img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-left {
+  transform: translateX(-60px);
+}
+
+.fade-in-right {
+  transform: translateX(60px);
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 @media (max-width: 768px) {
     header {
         padding: 50px 20px;
@@ -502,69 +471,44 @@ footer a:hover {
         margin-bottom: 30px;
     }
 
-    .service-category {
-        margin-bottom: 30px;
-    }
-
     .services-grid {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 20px;
-        margin: 0 -20px; 
-        scroll-padding: 0 20px; 
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 0;
+        overflow-x: hidden;
     }
 
     .service-card {
-        flex: 0 0 80%;
-        min-width: 250px;
-        scroll-snap-align: center;
-        scroll-snap-stop: always;
-        margin-right: 15px;
+        min-width: auto;
+        scroll-snap-align: none;
+        margin: 0;
     }
 
-    .service-card:first-child {
-        margin-left: 20px; 
-    }
-
-    .service-card:last-child {
-        margin-right: 20px;
-    }
-
-    .services-grid::-webkit-scrollbar {
+    .service-category::after {
         display: none;
     }
 
-    .services-grid {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+    .free-consultation.whatsapp-link {
+        font-size: 15px;
+        background: linear-gradient(90deg, #8e44ad, #ffd700);
+        color: #1b1b2f;
+        font-weight: bold;
+        box-shadow: 0 0 10px rgba(142, 68, 173, 0.6);
     }
 
-    /* Añade un indicador de desplazamiento */
-    .service-category::after {
-        content: '➜';
-        display: block;
-        text-align: center;
-        font-size: 24px;
-        color: #b8860b;
-        margin-top: 10px;
-        animation: pulse 2s infinite;
+    .free-consultation.whatsapp-link .icon-tabler-bell-ringing,
+    .free-consultation.whatsapp-link .whatsapp-icon {
+        width: 20px;
+        height: 20px;
     }
 
-    @keyframes pulse {
-        0% { opacity: 1; }
-        50% { opacity: 0.5; }
-        100% { opacity: 1; }
+    .testimonials .testimonial-img {
+        max-height: 350px;
     }
 
-    .carousel-container {
-        max-width: 90%;
-    }
-
-    .testimonial-img {
-        max-height: 300px;
+    .testimonials-list {
+        gap: 20px;
     }
 }
 
@@ -725,17 +669,12 @@ footer a:hover {
 }
 
 .free-consultation.whatsapp-link:hover {
-    background-color: #128c7e;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
 }
 
 .free-consultation.whatsapp-link .icon-tabler-bell-ringing {
     margin-right: 10px;
     animation: ring 4s 0.7s ease-in-out infinite;
-}
-
-.free-consultation.whatsapp-link span {
-    margin: 0 10px;
 }
 
 .free-consultation.whatsapp-link .whatsapp-icon {
@@ -744,22 +683,97 @@ footer a:hover {
     margin-left: 10px;
 }
 
-@media (max-width: 768px) {
-    .free-consultation.whatsapp-link {
-        font-size: 15px;
-        padding: 12px 20px;
-    }
-
-    .free-consultation.whatsapp-link .icon-tabler-bell-ringing,
-    .free-consultation.whatsapp-link .whatsapp-icon {
-        width: 20px;
-        height: 20px;
-    }
-}
-
 /* Aseguramos que la animación se detenga para usuarios que prefieren menos movimiento */
 @media (prefers-reduced-motion: reduce) {
     .free-consultation.whatsapp-link .icon-tabler-bell-ringing {
         animation: none;
+    }
+}
+
+header h1,
+h2,
+h3,
+h4 {
+    color: #ffd700;
+    text-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
+}
+
+header .subtitle {
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-top: 20px;
+    color: #f3e8ff;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+    line-height: 1.8;
+}
+
+section {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 50px 20px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+}
+
+.problemas,
+.service-card,
+.categoria-problema,
+.legend,
+.testimonials .message-bubble {
+    background-color: #2e2533 !important;
+    color: #f3e8ff !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    border-radius: 10px;
+}
+
+.categoria-problema h3,
+.service-card h4,
+.legend {
+    color: #ffd700 !important;
+}
+
+.categoria-problema p,
+.service-card p,
+.subtitulo-problemas {
+    color: #e2d6ff !important;
+}
+
+.free-consultation.whatsapp-link {
+    background: linear-gradient(90deg, #8e44ad, #b8860b);
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(142, 68, 173, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.testimonials .testimonial-img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.testimonial-legend {
+    font-size: 1.1em;
+    color: #e2d6ff;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-style: italic;
+    line-height: 1.6;
+    padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+    .testimonials .testimonial-img {
+        max-height: 350px;
+    }
+
+    .testimonials-list {
+        gap: 20px;
     }
 }
