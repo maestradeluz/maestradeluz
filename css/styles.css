@@ -166,8 +166,11 @@ section h2 {
 }
 
 .service-card h4 {
-    font-size: 1.4em;
+    font-size: 1.6em;
     margin: 15px 0;
+    color: #b73239;
+    font-weight: bold;
+    text-shadow: 0 0 6px rgba(183, 50, 57, 0.4), 0 0 10px rgba(255, 200, 200, 0.2);
 }
 
 .service-card p {
@@ -589,8 +592,7 @@ footer a:hover {
 
 header h1,
 h2,
-h3,
-h4 {
+h3 {
     color: #c89c5d;
     text-shadow: 0 0 6px rgba(198, 134, 66, 0.5);
 }
