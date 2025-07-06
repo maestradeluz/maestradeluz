@@ -299,30 +299,31 @@ section h2 {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #b8860b;
-    color: white;
-    margin-top: 30px;
+    background: linear-gradient(135deg, #2e2533, #3e2d4d);
+    color: #f3e8ff;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer p {
     font-size: 1em;
     letter-spacing: 0.5px;
+    color: #dcd6ff;
 }
 
 footer a {
-    color: white;
+    color: #ffd700;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 footer a:hover {
-    color: #9ddaf7;
-    text-shadow: 0 0 5px #03a9f4;
+    color: #fffacd;
+    text-shadow: 0 0 5px #ffd700;
 }
 
 /* Lazy loading de imágenes */
