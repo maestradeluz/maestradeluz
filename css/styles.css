@@ -12,8 +12,8 @@ html {
 
 body {
     font-family: 'Marcellus', 'Poppins', serif;
-    background: linear-gradient(to bottom, #1b1035, #311d40, #472361);
-    color: #f3e8ff;
+    background: linear-gradient(to bottom, #fff8e1, #f3d5a6);
+    color: #4a3b28;
     line-height: 1.6;
     max-width: 100%;
     overflow-x: hidden;
@@ -51,25 +51,22 @@ header h1 {
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #ffcc00;
-    text-shadow: 0 0 15px rgba(255, 204, 0, 0.8), 0 0 25px rgba(255, 204, 0, 0.4);
+    color: #c89c5d;
+    text-shadow: 0 0 15px rgba(200, 156, 93, 0.8), 0 0 25px rgba(200, 156, 93, 0.4);
 }
 
 header .subtitle {
     font-size: 1.3em;
     font-weight: 300;
     margin-top: 20px;
-    color: #f3e8ff;
+    color: #fff4e1;
     text-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
     line-height: 1.8;
 }
 
-/* Contenedor principal del logo */
 .logo {
-    background-color: linear-gradient(135deg, #311d40 0%, #3e225d 100%);
     padding: 10px 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    border: 2px solid #ffd700;
+    border: 2px solid #c89c5d;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,11 +80,10 @@ header .subtitle {
     text-align: center;
 }
 
-/* Estilo de cada parte del texto del logo */
 .logo-name {
     font-size: 1.5em;
     font-weight: 700;
-    color: #ffd700;
+    color: #c89c5d;
     text-transform: uppercase;
     line-height: 1;
 }
@@ -130,45 +126,23 @@ h3 {
     padding-bottom: 20px;
 }
 
-/* Secciones principales */
 section {
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    background: linear-gradient(180deg, #fffaf0, #f8ddb0);
     padding: 50px 20px;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 0 30px rgba(255, 235, 205, 0.25);
+    color: #3e2a1e;
 }
 
 section h2 {
     font-size: 2.5em;
     text-align: center;
     margin-bottom: 30px;
-    color: #ffd700;
-}
-
-.intro p,
-.services p,
-.contact p {
-    font-size: 1.1em;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #e8e6ff;
 }
 
 .subtitulo-problemas,
 .categoria-problema p,
 .service-card p {
     color: #dcd6ff !important;
-}
-
-.legend {
-    background-color: #d2f7d9;
-    border-left: 4px solid #ffd700;
-    padding: 20px;
-    margin-top: 30px;
-    font-style: italic;
-    color: #b8860b;
 }
 
 /* Servicios */
@@ -179,8 +153,6 @@ section h2 {
 }
 
 .service-card {
-    background: linear-gradient(135deg, #311d40 0%, #3e225d 100%);
-    color: #eee6ff;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
@@ -195,7 +167,6 @@ section h2 {
 
 .service-card h4 {
     font-size: 1.4em;
-    color: #b8860b;
     margin: 15px 0;
 }
 
@@ -230,20 +201,6 @@ section h2 {
     height: 0;
     border-top: 8px solid #2e2533;
     border-left: 8px solid transparent;
-}
-
-.dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #b3b3b3;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.dot.active {
-    background: #128C7E;
 }
 
 /* Botón de WhatsApp */
@@ -302,20 +259,17 @@ section h2 {
 footer {
     text-align: center;
     padding: 20px;
-    background: linear-gradient(135deg, #2e2533, #3e2d4d);
-    color: #f3e8ff;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(0deg, #fffaf0, #f8ddb0);
 }
 
 footer p {
     font-size: 1em;
     letter-spacing: 0.5px;
-    color: #dcd6ff;
+    color: #555;
 }
 
 footer a {
-    color: #ffd700;
+    color: #c89c5d;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease, text-shadow 0.3s ease;
@@ -337,6 +291,13 @@ footer a:hover {
     transition: opacity 300ms;
 }
 
+.testimonials {
+    background: linear-gradient(0deg, #fffaf0, #f8ddb0);
+    padding: 50px 20px;
+    box-shadow: inset 0 0 30px rgba(255, 235, 205, 0.25);
+    color: #3e2a1e;
+}
+
 .testimonials-list {
     display: flex;
     flex-direction: column;
@@ -352,7 +313,6 @@ footer a:hover {
 
 .testimonials .message-bubble {
     background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(4px);
 }
 
@@ -434,10 +394,21 @@ footer a:hover {
 
     .free-consultation.whatsapp-link {
         font-size: 15px;
-        background: linear-gradient(90deg, #a259ff, #ffcc00);
+        background: linear-gradient(90deg, #d9b47c, #c89c5d);
         color: #fff;
         font-weight: bold;
         box-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 50px;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
     .free-consultation.whatsapp-link .icon-tabler-bell-ringing,
@@ -471,7 +442,6 @@ footer a:hover {
 }
 
 .contact h2 {
-    color: #ffd700;
     margin-bottom: 20px;
 }
 
@@ -586,29 +556,13 @@ footer a:hover {
     padding-bottom: 60px;
 }
 
-.intro .free-consultation.whatsapp-link {
+.intro {
     display: inline-flex;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 20px;
     z-index: 10;
-}
-
-/* Estilos para el botón de consulta gratis */
-.free-consultation.whatsapp-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #25d366;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 50px;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .free-consultation.whatsapp-link:hover {
@@ -637,8 +591,8 @@ header h1,
 h2,
 h3,
 h4 {
-    color: #ffd700;
-    text-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
+    color: #c89c5d;
+    text-shadow: 0 0 6px rgba(198, 134, 66, 0.5);
 }
 
 header .subtitle {
@@ -653,44 +607,22 @@ header .subtitle {
 section {
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
     padding: 50px 20px;
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
 }
 
-.problemas,
 .service-card,
-.categoria-problema,
-.legend,
 .testimonials .message-bubble {
-    background-color: #2e2533 !important;
-    color: #f3e8ff !important;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+    background-color: #f3e3c3;
+    color: #4a3b28;
+    box-shadow: 0 0 12px rgba(198, 134, 66, 0.08);
     backdrop-filter: blur(6px);
-    border-radius: 10px;
-}
-
-.categoria-problema h3,
-.service-card h4,
-.legend {
-    color: #ffd700 !important;
 }
 
 .categoria-problema p,
 .service-card p,
 .subtitulo-problemas {
-    color: #e2d6ff !important;
-}
-
-.free-consultation.whatsapp-link {
-    background: linear-gradient(90deg, #8e44ad, #b8860b);
-    color: #fff;
-    font-weight: bold;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 10px rgba(142, 68, 173, 0.6);
-    transition: all 0.3s ease-in-out;
+    color: #5b4a2f !important;
 }
 
 .testimonials .testimonial-img {
@@ -698,17 +630,6 @@ section {
     height: auto;
     border-radius: 6px;
     object-fit: cover;
-}
-
-.testimonial-legend {
-    font-size: 1.1em;
-    color: #e2d6ff;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 30px;
-    font-style: italic;
-    line-height: 1.6;
-    padding: 0 15px;
 }
 
 @media (max-width: 768px) {
