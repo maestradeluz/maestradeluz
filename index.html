@@ -20,42 +20,23 @@
   <link rel="manifest" href="assets/site.webmanifest">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16805849083"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11493007088">
-  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11493007088"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
+    gtag('js', new Date());
     gtag('config', 'AW-11493007088');
-  </script>
-  <!-- Event snippet for Vista de una página conversion page -->
-  <script>
-    gtag('event', 'conversion', {
-      'send_to': 'AW-11493007088/d_xkCPGQ1PcZEPC9pegq',
-      'value': 100.0,
-      'currency': 'COP'
-    });
-  </script>
-  <!-- Event snippet for WhatsApp conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-  <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof (url) != 'undefined') {
-          window.location = url;
-        }
-      };
+    gtag('config', 'AW-16805849083');
+
+    // Evento de conversión de vista de página
+    window.addEventListener('DOMContentLoaded', function () {
       gtag('event', 'conversion', {
-        'send_to': 'AW-11493007088/tQNOCK2hz_gZEPC9pegq',
+        'send_to': 'AW-11493007088/d_xkCPGQ1PcZEPC9pegq',
         'value': 100.0,
-        'currency': 'COP',
-        'event_callback': callback
+        'currency': 'COP'
       });
-      return false;
-    }
+    });
   </script>
 
 </head>
